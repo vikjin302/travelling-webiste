@@ -1,0 +1,858 @@
+/* Reset styles */
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Laila:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Kalam:wght@300;400;700&family=Laila:wght@300;400;500;600;700&family=Stylish&display=swap');
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #FFFF8F;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+header {
+  background-color:#B01432;
+  color: #FFA900;
+  padding: 20px;
+  text-align: center;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.main-content {
+  margin-top: 20px;
+}
+
+.main-content h2 {
+  margin-bottom: 20px;
+  color:#3498db ;
+   
+  
+  width: 100%;
+  text-align: center;
+}
+
+.destination {
+  flex: 0 0 calc(33.333% - 20px); /* Each grid item takes up 1/3 of the container width minus margin */
+  margin: 10px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #fff;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+  position: relative; /* Add relative positioning */
+}
+
+.destination img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.place {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: #fff;
+  font-size: 20px;
+  z-index: 1;
+}
+
+.destination p {
+  color: #555;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.btn {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #3498db;
+  color: #fff;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 14px;
+}
+
+.btn:hover {
+  background-color: #2980b9;
+}
+
+/* Button animations */
+.btn.btn-1::before,
+.btn.btn-1::after,
+.btn.btn-2::before,
+.btn.btn-2::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #3498db;
+  z-index: -1;
+  transition: transform 0.3s ease;
+}
+
+.btn.btn-1::before,
+.btn.btn-2::before {
+  transform: scaleX(0);
+  transform-origin: right;
+}
+
+.btn.btn-1::after,
+.btn.btn-2::after {
+  transform: scaleY(0);
+  transform-origin: top;
+}
+
+.btn.btn-1:hover::before,
+.btn.btn-1:hover::after,
+.btn.btn-2:hover::before,
+.btn.btn-2:hover::after {
+  transform: scaleX(1) scaleY(1);
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-content p {
+  margin: 5px 0;
+}
+
+.btn.btn-3 {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #3498db;
+  color: #fff;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 14px;
+}
+
+.btn.btn-3:hover {
+  background-color: #2980b9;
+}
+
+.btn.btn-4 {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #3498db;
+  color: #fff;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 14px;
+}
+
+.btn.btn-4:hover {
+  background-color: #2980b9;
+}
+
+.btn.btn-5 {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #3498db;
+  color: #fff;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 14px;
+}
+
+.btn.btn-5:hover {
+  background-color: #2980b9;
+}
+
+.btn.btn-6 {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #3498db;
+  color: #fff;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 14px;
+}
+
+.btn.btn-6:hover {
+  background-color: #2980b9;
+}
+
+.btn.btn-7 {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #3498db;
+  color: #fff;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 14px;
+}
+
+.btn.btn-7:hover {
+  background-color: #2980b9;
+}
+
+.btn.btn-8 {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #3498db;
+  color: #fff;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 14px;
+}
+
+.btn.btn-8:hover {
+  background-color: #2980b9;
+}
+
+/* Add more button styles as needed */
+.btn.btn-9 {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #3498db;
+  color: #fff;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 14px;
+}
+
+.btn.btn-9:hover {
+  background-color: #2980b9;
+}
+
+.btn.btn-10 {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #3498db;
+  color: #fff;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 14px;
+}
+
+.btn.btn-10:hover {
+  background-color: #2980b9;
+}
+
+.btn.btn-11 {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #3498db;
+  color: #fff;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 14px;
+}
+
+.btn.btn-11:hover {
+  background-color: #2980b9;
+}
+
+.btn.btn-12 {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #3498db;
+  color: #fff;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 14px;
+}
+
+.btn.btn-12:hover {
+  background-color: #2980b9;
+}
+
+.btn.btn-13 {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #3498db;
+  color: #fff;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 14px;
+}
+
+.btn.btn-13:hover {
+  background-color: #2980b9;
+}
+
+.btn.btn-14 {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #3498db;
+  color: #fff;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 14px;
+}
+
+.btn.btn-14:hover {
+  background-color: #2980b9;
+}
+
+.btn.btn-15 {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #3498db;
+  color: #fff;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 14px;
+}
+
+.btn.btn-15:hover {
+  background-color: #2980b9;
+}
+
+.btn.btn-16 {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #3498db;
+  color: #fff;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 14px;
+}
+
+.btn.btn-16:hover {
+  background-color: #2980b9;
+}
+
+.btn.btn-17 {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #3498db;
+  color: #fff;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 14px;
+}
+
+.btn.btn-17:hover {
+  background-color: #2980b9;
+}
+
+.btn.btn-18 {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #3498db;
+  color: #fff;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 14px;
+}
+
+.btn.btn-18:hover {
+  background-color: #2980b9;
+}
+
+.btn.btn-19 {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #3498db;
+  color: #fff;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 14px;
+}
+
+.btn.btn-19:hover {
+  background-color: #2980b9;
+}
+
+.btn.btn-20 {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #3498db;
+  color: #fff;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 14px;
+}
+
+.btn.btn-20:hover {
+  background-color: #2980b9;
+}
+
+/* Style for search bar */
+.search-bar {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.search-bar input[type="text"] {
+  width: 300px;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  font-size: 16px;
+  transition: box-shadow 0.3s ease;
+}
+
+.search-bar input[type="text"]:focus {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar input[type="text"]::placeholder {
+  color: #aaa;
+}
+
+/* Style for weather info */
+/* Style for weather info */
+/* Style for weather info */
+.weather-info {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: #333;
+  font-size: 14px;
+}
+
+/* Style for weather icon */
+.weather-icon {
+  position: absolute;
+  bottom: 5px; /* Adjust as needed */
+  left: 5px; /* Adjust as needed */
+  width: 50px; /* Adjust size as needed */
+  height: 50px; /* Adjust size as needed */
+  background-image: url(''); /* Replace with your weather icon image */
+  background-size: cover;
+}
+
+.recommended-places {
+  margin-top: 40px;
+}
+
+.recommended-places h2 {
+  text-align: center;
+  font-size: 24px;
+  color: #333;
+}
+
+.recommended-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.recommended-item {
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.recommended-item h3 {
+  font-size: 18px;
+  color: #333;
+}
+
+.recommended-item p {
+  margin-top: 10px;
+  color: #666;
+}
+
+.recommended-item .fact {
+  font-style: italic;
+  margin-top: 20px;
+}
+
+/* Animation for recommended item */
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+
+.recommended-item {
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: fadeInOut 8s ease infinite; /* Change the duration as needed */
+}
+
+.recommended-item h3 {
+  font-size: 18px;
+  color: #333;
+}
+
+.recommended-item p {
+  margin-top: 10px;
+  color: #666;
+}
+
+.recommended-item .fact {
+  font-style: italic;
+  margin-top: 20px;
+}
+/* Style for header slideshow */
+.slideshow {
+  position: relative;
+  width: 100%;
+  height: 300px; /* Adjust height as needed */
+  overflow: hidden;
+}
+
+.slideshow img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  animation: fade 5s infinite;
+}
+
+/* Animation for slideshow images */
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Style for header content */
+/* Style for header slideshow */
+/* Style for header slideshow */
+.slideshow {
+  position: relative;
+  width: 100%;
+  height: 300px; /* Adjust height as needed */
+  overflow: hidden;
+}
+
+.slideshow img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 5s ease; /* Add transition effect */
+}
+
+.slideshow img.active {
+  opacity: 1;
+}
+
+
+/* Animation for slideshow images */
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Style for header content */
+header {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+header h1 {
+  font-size: 36px;
+  margin-top: 20px;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+.destination .image-container img {
+  width: 360px; /* Adjust width as needed */
+  height: 250px; /* Adjust height as needed */
+  object-fit: cover;
+}
+
+.destination {
+  position: relative;
+  overflow: hidden;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.image-container {
+  position: relative;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.place-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  text-align: center;
+}
+
+.place {
+  color: white;
+  margin: 0;
+}
+
+.destination-info {
+  padding: 20px;
+  font-style:bold;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #3498db;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+/* Add hover animation for destination */
+.destination:hover .image-container img {
+  transform: scale(1.05); /* Example: Increase size on hover */
+}
+
+/* Add click animation for destination */
+.destination:active .image-container img {
+  transform: scale(0.95); /* Example: Decrease size on click */
+}
+
+/* Add hover animation for place name */
+.place-overlay {
+  transition: background-color 0.3s ease; /* Example: Change background color on hover */
+}
+
+.place-overlay:hover {
+  background-color: rgba(0, 0, 0, 0.8); /* Example: Darken background color on hover */
+}
+P{
+  font-style: bold;
+}
+ .travelIndia{
+  font-family: "Laila",serif;
+
+
+}
+.populardest{
+  font-family: "Stylish",serif;
+}
+/* CSS for destination tabs */
+
+.destination {
+  position: relative; /* Added for animation */
+  border: 4px solid transparent; /* Initial border */
+  transition: border-color 0.3s ease; /* Smooth transition for border color */
+}
+
+.destination:hover {
+  border-color: #007F73; /* Border color on hover */
+}
+
+/* Animation for destination tabs */
+.destination img {
+  transition: transform 0.3s ease; /* Smooth transition for image */
+}
+
+.destination:hover img {
+  transform: scale(1.1); /* Scale up the image on hover */
+}
+.info-main{
+  font-style: bold;
+}
+.travelIndia{
+  color:#FFA900;
+}
+/* Add more CSS styles for other elements as needed */
+
+
+
+
+
